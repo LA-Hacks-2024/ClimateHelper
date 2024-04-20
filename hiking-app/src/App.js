@@ -1,6 +1,7 @@
 import './App.css';
 import Logo from './logo';
 import Menu from './Menu'
+import Login from "./components/login"
 
 function App() {
   return (
@@ -9,8 +10,11 @@ function App() {
       <header className=  "App-header">
         <div className="menu">
         <Menu/>
+        
         </div>
-
+        <div>
+          <Login/>
+        </div>
         <Logo/>
        
       </header>
