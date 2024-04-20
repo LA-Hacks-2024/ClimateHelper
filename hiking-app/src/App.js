@@ -1,5 +1,6 @@
 import './App.css';
 import Logo from './logo';
+import BGTrees from './bgtrees';
 import Menu from './Menu'
 
 function App() {
@@ -20,6 +21,8 @@ function App() {
           <input class="w3-input" type="text"></input><br></br>
     
           <button>sign in</button> */}
+
+         
                 
       </header>
     </div>
