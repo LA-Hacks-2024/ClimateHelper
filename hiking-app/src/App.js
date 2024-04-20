@@ -1,4 +1,5 @@
 import './App.css';
+import Logo from './logo';
 import Menu from './Menu'
 
 function App() {
@@ -9,6 +10,8 @@ function App() {
         <div className="menu">
         <Menu/>
         </div>
+
+        <Logo/>
        
       </header>
     </div>
