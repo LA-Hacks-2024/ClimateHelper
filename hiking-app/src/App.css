@@ -31,3 +31,8 @@
 .menu li:hover{
   background-color: #5db37e;
 }
+
+.login li{
+  margin-left: 50px;
+  display: flex;
+}

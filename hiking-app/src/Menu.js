@@ -5,6 +5,9 @@ const Menu = () => {
                 <li>Home</li>
                 <li>About</li>
                 <li>Touch Grass</li>
+                <li className = "login">Login</li>
+                <li className = "signup">SIgnup</li>
+
             </ul>
         </div>
     );
