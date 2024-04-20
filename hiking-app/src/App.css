@@ -3,7 +3,7 @@
 }
 
 .App-header {
-  background-color: #2ed195;
+  background: linear-gradient(180deg, #C4F4CF 0%, #63CFC8 50%, #01848C 100%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -15,10 +15,8 @@
 
 .menu ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 700px;
-  margin-right: 600px;
+  padding: 5px;
+  margin-right: 0;
   display: flex;
 }
 

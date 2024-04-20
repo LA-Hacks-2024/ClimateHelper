@@ -16,7 +16,15 @@ function App() {
           <Login/>
         </div>
         <Logo/>
-       
+
+          <label>username</label>
+          <input class="w3-input" type="text"></input>
+
+          <label>password</label>
+          <input class="w3-input" type="text"></input>
+
+          <button>sign in</button>
+                
       </header>
     </div>
   );
