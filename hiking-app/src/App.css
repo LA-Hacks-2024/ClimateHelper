@@ -10,23 +10,24 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
-.Menu ul {
-  list-style-type: none;
+.menu ul {
+  list-style: none;
   padding: 0;
-  margin: 10;
+  margin: 0;
+  margin-bottom: 700px;
+  margin-right: 600px;
   display: flex;
 }
 
-.Menu li{
+.menu li{
   padding: 8px 15px;
   margin: 5px;
-  background-color: #f0f0f0;
   cursor: pointer;
 }
 
-.Menu li:hover{
-  background-color: #ddd;
+.menu li:hover{
+  background-color: #5db37e;
 }
