@@ -13,13 +13,13 @@ function App() {
 
         <Logo/>
 
-          <label>username</label>
+          {/* <label>username</label>
           <input class="w3-input" type="text"></input>
 
           <label>password</label>
           <input class="w3-input" type="text"></input><br></br>
 
-          <button>sign in</button>
+          <button>sign in</button> */}
                 
       </header>
     </div>
