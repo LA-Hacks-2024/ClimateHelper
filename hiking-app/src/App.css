@@ -36,3 +36,8 @@
   margin-left: 50px;
   display: flex;
 }
+
+.login-button{
+  display: flex;
+  margin-bottom: 0px;
+}
