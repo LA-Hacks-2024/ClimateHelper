@@ -15,11 +15,12 @@ function about(){
       <li onClick={() => {
         navigate("/");
       }}>
+        <div className="about-page">
         Go to Home page
+        </div>
       </li>
       </ul>
-      </div>
-    </div>
+      </div>This website is supposed to be an all-in-one social good platform in the Los Angeles area. After logging in, the user should be able to find volunteer opportunities and learn more about how they can do their part in helping the environment.</div>
   )
 }
 export default about;
