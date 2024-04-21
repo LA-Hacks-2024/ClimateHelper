@@ -9,7 +9,7 @@ function about(){
   // }  
 
   return (
-    <div className="App-about">
+    <div className="App-about"> 
       <div>
         {/* <Logo/> */}
       </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
 import { Link } from 'react-router-dom';
+import grassImage from '../assets/grass.png';
 
 
 function Touchgrass(){
@@ -26,6 +27,9 @@ function Touchgrass(){
         </div>
       {/* </li> */}
       </ul>
+      </div>
+      <div >
+      <img src={grassImage} alt="grass"  style={{ width: '300px', height: '200px' }}/> 
       </div>
       </div>
   )
