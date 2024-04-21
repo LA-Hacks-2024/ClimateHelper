@@ -3,6 +3,7 @@ import Logo from './logo';
 import Menu from './Menu'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import About from "./pages/about"
+import Login from './components/login';
 
 
 function App() {  
@@ -15,6 +16,7 @@ function App() {
       <Routes >
             <Route path ="/"element = {<Menu/>}/>
             <Route path ="/about"element = {<About/>}/>
+            <Route path ="/login"element = {<Login/>}/>
           </Routes>
         <div className="menu">
         

@@ -2,10 +2,13 @@
 
 import React, { useState } from 'react';
 import { signInWithEmailAndPassword } from '../services/authService.js';
+import {useNavigate} from "react-router-dom";
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
+
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -35,6 +38,13 @@ function Login() {
         />
         <button classname="login-button" type="submit">Login</button>
       </form>
+
+      <button onClick={() => {
+        navigate("/");
+      }}>
+        Go to Home page
+      </button>
+
     </div>
   );
 }
