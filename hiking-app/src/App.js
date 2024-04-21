@@ -2,11 +2,19 @@ import './App.css';
 import Logo from './logo';
 import BGTrees from './bgtrees';
 import Menu from './Menu'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import About from "./pages/about"
 
-function App() {
+
+function App() {  
   return (
     <div className="App">
-      
+      <BrowserRouter>
+
+          <Routes >
+            <Route path ="/"element = {<Menu/>}/>
+            <Route path ="/about"element = {<About/>}/>
+          </Routes>
       <header className=  "App-header">
         <div className="menu">
         <Menu/>
@@ -25,6 +33,7 @@ function App() {
          
                 
       </header>
+      </BrowserRouter>
     </div>
   );
 }
