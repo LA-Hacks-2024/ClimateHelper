@@ -38,5 +38,3 @@ export const signInWithGoogle = () => {
       console.log(error);
    });
 };
-
- 

@@ -5,6 +5,7 @@ import { signInWithEmailAndPassword } from '../services/authService.js';
 import {useNavigate} from "react-router-dom";
 import { signInWithPopup } from 'firebase/auth';
 
+
 function Signup() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -13,13 +14,14 @@ function Signup() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      await signInWithPopup(email, password); 
-      console.log('Signup successful');
-      // Redirect user or update UI
-    } catch (error) {
-      console.error('Failed to Signup:', error.message);
-    }
+    // try {
+    //   await signInWithPopup(email, password); 
+    //   console.log('Login successful');
+    //   // Redirect user or update UI
+    // } catch (error) {
+    //   console.error('Failed to Login:', error.message);
+    // }
+    console.log(`Signup submitted with: email: ${email}, password: ${password}`);
     setEmail('');
     setPassword('');
   };
@@ -35,6 +37,7 @@ function Signup() {
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          required
         />
         </div>
         </div>
@@ -46,6 +49,7 @@ function Signup() {
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          required
         />
          </div>
         </div>
