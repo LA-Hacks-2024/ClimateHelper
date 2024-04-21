@@ -3,7 +3,7 @@ import Logo from './logo';
 import Menu from './Menu'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import About from "./pages/about"
-import Login from './components/login';
+import Signup from './components/signup';
 import Touchgrass from './pages/touchgrass';
 
 
@@ -17,7 +17,7 @@ function App() {
       <Routes >
             <Route path ="/"element = {<Menu/>}/>
             <Route path ="/about"element = {<About/>}/>
-            <Route path ="/login"element = {<Login/>}/>
+            <Route path ="/signup"element = {<Signup/>}/>
             <Route path ="/touchgrass"element = {<Touchgrass/>}/>
 
           </Routes>
