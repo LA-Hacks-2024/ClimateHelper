@@ -1,5 +1,7 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
+import { Link } from 'react-router-dom';
+
 
 function Touchgrass(){
   //const [goToHome, setGoToHome] = React.useState(false);
@@ -9,17 +11,18 @@ function Touchgrass(){
   // }  
 
   return (
-    <div className="App-about">
-      <div className="menu">
+     <div className="App-about">
+      <div className="menu-1">
       <ul>
-      <li onClick={() => {
-        navigate("/");
-      }}>
-        Go to Home page
-      </li>
+        <div className="about-page-1">
+          <ul>
+          <Link to="/" className="about-link"> Go to Home page </Link>
+        </ul>
+        </div>
+      {/* </li> */}
       </ul>
       </div>
-    </div>
+      </div>
   )
 }
 export default Touchgrass;

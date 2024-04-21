@@ -31,6 +31,15 @@
 
 }
 
+.about-page-1{
+  display: flex;
+  margin-left: -80px;
+  cursor: pointer;
+  text-decoration: none;
+  list-style: none;
+  
+
+}
 
 .menu ul {
   list-style: none;
