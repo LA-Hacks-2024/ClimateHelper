@@ -10,17 +10,20 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-
-          <Routes >
+          {/* <BGTrees/> */}
+         
+      <header className=  "App-header">
+      <Logo/>
+      {/* <Menu/> */}
+      <Routes >
             <Route path ="/"element = {<Menu/>}/>
             <Route path ="/about"element = {<About/>}/>
           </Routes>
-      <header className=  "App-header">
         <div className="menu">
-        <Menu/>
+        
         </div>
 
-        <Logo/>
+       
 
           {/* <label>username</label>
           <input class="w3-input" type="text"></input>

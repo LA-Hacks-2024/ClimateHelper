@@ -6,11 +6,11 @@ function about(){
   const navigate = useNavigate();
   // if (goToHome){
   //   return <Navigate to ="/"/>;
-  // }
+  // }  
 
   return (
-    <div>
-      About{" "}
+    <div className="App-about">
+      
       <button onClick={() => {
         navigate("/");
       }}>
