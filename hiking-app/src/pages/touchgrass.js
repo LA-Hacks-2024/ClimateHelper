@@ -7,6 +7,11 @@ function Touchgrass(){
   // if (goToHome){
   //   return <Navigate to ="/"/>;
   // }  
+  <script>
+    function play() {
+
+    }
+  </script>
 
   return (
     <div className="App-about">
