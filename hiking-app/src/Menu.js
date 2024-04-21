@@ -11,7 +11,7 @@ const Menu = () => {
                 {/* <li className = "signup">Signup</li> */}
             </ul>
         </div>
-    );
+    );  
 }
 
 export default Menu;

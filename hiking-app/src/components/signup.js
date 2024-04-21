@@ -1,8 +1,9 @@
 // src/components/Login.js
 
 import React, { useState } from 'react';
-import { signInWithEmailAndPassword } from '../services/authService.js';
+import { signInWithEmailAndPassword } from '../services/authService.js';  
 import {useNavigate} from "react-router-dom";
+import { signInWithPopup } from 'firebase/auth';
 
 function Signup() {
   const [email, setEmail] = useState('');
@@ -10,23 +11,22 @@ function Signup() {
   const navigate = useNavigate();
 
 
-  const handleLogin = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await signInWithEmailAndPassword(email, password);
-      console.log('Login successful');
+      await signInWithPopup(email, password); 
+      console.log('Signup successful');
       // Redirect user or update UI
     } catch (error) {
-      console.error('Failed to login:', error.message);
+      console.error('Failed to Signup:', error.message);
     }
+    setEmail('');
+    setPassword('');
   };
-
- 
-
 
   return (
     <div>
-      <form onSubmit={handleLogin}>
+      <form onSubmit={handleSubmit}>
       <div className="menu">
       <div className="input-container">
         <input
