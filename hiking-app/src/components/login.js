@@ -21,26 +21,33 @@ function Login() {
     }
   };
 
+ 
+
+
   return (
     <div>
       <form onSubmit={handleLogin}>
       <div className="menu">
-
+      <div className="input-container">
         <input
+          className="input-element"
           type="email"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         </div>
+        </div>
         <div>
+        <div className="input-container">
         <input
-        
+          className="input-element"
           type="password" 
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
+         </div>
         </div>
           <button classname="login-button" type="submit">Login</button>
           </form>
