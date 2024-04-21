@@ -40,7 +40,7 @@ function Signup() {
 
   const signInWithGoogle = async () => {
     const provider = new GoogleAuthProvider();
-    try {
+    try { 
       // Attempt to sign in with Google
       const result = await signInWithPopup(auth, provider);
       console.log('Google sign-in successful:', result.user);
@@ -60,14 +60,13 @@ function Signup() {
           </form>
 
           <div className="App-about">
-      <div className="login-button">
+      <div className="login-button-1">
 
       <li onClick={() => {
         navigate("/");
       }}>
         Go to Home page
       </li>
-   
       </div>
     </div>
 
