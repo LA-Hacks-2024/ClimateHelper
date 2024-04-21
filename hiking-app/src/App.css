@@ -21,6 +21,17 @@
   color: white;
 }
 
+.about-page{
+  display: flex;
+  margin-left: 515px;
+  cursor: pointer;
+  text-decoration: none;
+  list-style: none;
+  
+
+}
+
+
 .menu ul {
   list-style: none;
   padding: 5px;
