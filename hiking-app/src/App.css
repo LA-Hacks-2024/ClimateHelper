@@ -23,12 +23,14 @@
 
 .about-page{
   display: flex;
-  margin-left: 515px;
+  justify-content: center;
   cursor: pointer;
   text-decoration: none;
   list-style: none;
   width: fit-content;
   block-size: fit-content;
+  align-items: center;
+  flex-direction: column;
 
 }
 

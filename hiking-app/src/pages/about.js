@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import Logo from '../logo';
 
 function about(){
   //const [goToHome, setGoToHome] = React.useState(false);
@@ -9,6 +10,9 @@ function about(){
 
   return (
     <div className="App-about">
+      <div>
+        {/* <Logo/> */}
+      </div>
       <div className="menu-1">
       <ul>
         <div className="about-page">
