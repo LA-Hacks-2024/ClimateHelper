@@ -4,9 +4,8 @@ import React, { useState } from 'react';
 import { signInWithEmailAndPassword } from '../services/authService.js';  
 import {useNavigate} from "react-router-dom";
 import { signInWithPopup } from 'firebase/auth';
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider } from "firebase/auth";
 import { initializeApp } from "firebase/app";
-import { GoogleAuthProvider } from "firebase/auth/cordova";
 
 // TODO: Add SDKs for Firebase products that you want to use
 
@@ -19,73 +18,43 @@ const firebaseConfig = {
   appId: `${process.env.REACT_APP_FIREBASE_APP_ID}`,
   measurementId: `${process.env.REACT_APP_FIREBASE_MEASUREMENT_ID}`
 };
-function Signup() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const navigate = useNavigate();
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 
+function Signup() {
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    // try {
-    //   await signInWithPopup(email, password); 
-    //   console.log('Login successful');
-    //   // Redirect user or update UI
-    // } catch (error) {
-    //   console.error('Failed to Login:', error.message);
-    // }
-    const app = initializeApp(firebaseConfig);
-  //  const auth = getAuth();
-    const auth = getAuth(app);
-    const provider = new GoogleAuthProvider();
-    const signInWithGoogle = () => {
-  signInWithPopup(auth, provider)
-    .then((result) => {
-      const name = result.user.displayName;
-      const email = result.user.email;
-      const profilePic = result.user.photoURL;
-      localStorage.setItem("name", name);
-      localStorage.setItem("email", email);
-      localStorage.setItem("profilePic", profilePic);
-      refreshPage();
-      console.log(name);
-    })
-    .catch((error) => {
-      console.log(error);
-   });
-};
 
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // User registration successful
-        const user = userCredential.user;
-        console.log('User created:', user);
-
-        // TODO: Update the user profile or send a verification email
-
-        // Clear the form
-        setEmail('');
-        setPassword('');
-
-        // TODO: Redirect to another page after successful signup
-      })
-      .catch((error) => {
-        // Handle errors here
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.error("Error signing up:", errorCode, errorMessage);
-        // TODO: Implement more user-friendly error messages or actions based on errorCode
-      });
-    console.log(`Signup submitted with: email: ${email}, password: ${password}`);
-    setEmail('');
-    setPassword('');
+    try {
+      // Attempt to create a new user with email and password
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      console.log('User created:', userCredential.user);
+      // Optional: navigate to another screen upon success
+      navigate('/signup'); // Adjust the route as necessary
+    } catch (error) {
+      console.error('Failed to signup:', error.message);
+    }
   };
 
+  const signInWithGoogle = async () => {
+    const provider = new GoogleAuthProvider();
+    try {
+      // Attempt to sign in with Google
+      const result = await signInWithPopup(auth, provider);
+      console.log('Google sign-in successful:', result.user);
+      // Optional: navigate or perform other actions on success
+      navigate('/signup'); // Adjust the route as necessary
+    } catch (error) {
+      console.error('Failed to sign in with Google:', error.message);
+    }
+  };
+ 
   return (
     <div>
       <form onSubmit={handleSubmit}>
-      <div className="menu">
+      {/* <div className="menu">
       <div className="input-container">
         <input
           className="input-element"
@@ -108,8 +77,8 @@ function Signup() {
           required
         />
          </div>
-        </div>
-          <button classname="login-button" type="submit">Sign up</button>
+        </div> */}
+          <button onClick={signInWithGoogle} classname="login-button" type="submit">Sign up with google</button>
           </form>
 
           <div className="App-about">
