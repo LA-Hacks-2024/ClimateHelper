@@ -54,42 +54,20 @@ function Signup() {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-      {/* <div className="menu">
-      <div className="input-container">
-        <input
-          className="input-element"
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        </div>
-        </div>
-        <div>
-        <div className="input-container">
-        <input
-          className="input-element"
-          type="password" 
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-         </div>
-        </div> */}
-          <button onClick={signInWithGoogle} classname="login-button" type="submit">Sign up with google</button>
+     <div className='login-button'>
+          <li onClick={signInWithGoogle}  type="submit">Sign up with google</li>
+          </div>
           </form>
 
           <div className="App-about">
-      <div className="menu">
-      <ul>
+      <div className="login-button">
+
       <li onClick={() => {
         navigate("/");
       }}>
         Go to Home page
       </li>
-      </ul>
+   
       </div>
     </div>
 

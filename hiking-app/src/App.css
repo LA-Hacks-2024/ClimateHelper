@@ -47,6 +47,13 @@
   margin: 10px;
   display: flex;
   justify-content: center;
+  background-color: #5db37e;
+  list-style: none;
+  padding: 5px;
+  margin-right: 0;
+  display: flex;
+  cursor: pointer;
+
 }
 
 /* App.css */
@@ -68,4 +75,16 @@
   outline: none;
   border-color: #007bff;
   box-shadow: 0 0 0 2px rgba(0,123,255,.25);
+}
+
+.menu1{
+  list-style: none;
+  padding: 5px;
+  margin-right: 0;
+  display: flex;
+  padding: 8px 15px;
+  margin: 5px;
+  cursor: pointer;
+  background-color: #5db37e;
+
 }
