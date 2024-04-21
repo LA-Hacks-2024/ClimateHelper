@@ -12,6 +12,8 @@
 /build
 
 # misc
+.vercel
+.vercel/project.json
 .env
 .DS_Store
 .env.local

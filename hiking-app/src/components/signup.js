@@ -23,7 +23,8 @@ const auth = getAuth(app);
 
 function Signup() {
   const navigate = useNavigate();
-
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -36,26 +37,37 @@ function Signup() {
     } catch (error) {
       console.error('Failed to signup:', error.message);
     }
+    setEmail('');
+  setPassword('');
   };
 
-  const signInWithGoogle = async () => {
-    const provider = new GoogleAuthProvider();
-    try { 
-      // Attempt to sign in with Google
-      const result = await signInWithPopup(auth, provider);
-      console.log('Google sign-in successful:', result.user);
-      // Optional: navigate or perform other actions on success
-      navigate('/signup'); // Adjust the route as necessary
-    } catch (error) {
-      console.error('Failed to sign in with Google:', error.message);
-    }
-  };
+  
  
   return (
     <div>
       <form onSubmit={handleSubmit}>
+      <div>
+          <label for="email">Email:</label>
+          <input 
+            type="email" 
+            id="email"
+            value={email} 
+            onChange={(e) => setEmail(e.target.value)} 
+            required 
+          />
+        </div>
+        <div>
+          <label for="password">Password:</label>
+          <input 
+            type="password" 
+            id="password"
+            value={password} 
+            onChange={(e) => setPassword(e.target.value)} 
+            required 
+          />
+        </div>
      <div className='login-button'>
-          <li onClick={signInWithGoogle}  type="submit">Sign up with google</li>
+          <li onClick={handleSubmit}  type="submit"> Submit</li>
           </div>
           </form>
 
