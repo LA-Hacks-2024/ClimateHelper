@@ -36,14 +36,20 @@ function Login() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button classname="login-button" type="submit">Login</button>
-      </form>
+          <button classname="login-button" type="submit">Login</button>
+          </form>
 
-      <button onClick={() => {
+          <div className="App-about">
+      <div className="menu">
+      <ul>
+      <li onClick={() => {
         navigate("/");
       }}>
         Go to Home page
-      </button>
+      </li>
+      </ul>
+      </div>
+    </div>
 
     </div>
   );
