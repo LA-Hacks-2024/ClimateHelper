@@ -10,12 +10,15 @@ function about(){
 
   return (
     <div className="App-about">
-      
-      <button onClick={() => {
+      <div className="menu">
+      <ul>
+      <li onClick={() => {
         navigate("/");
       }}>
         Go to Home page
-      </button>
+      </li>
+      </ul>
+      </div>
     </div>
   )
 }
