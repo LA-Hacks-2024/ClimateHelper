@@ -4,6 +4,7 @@ import Menu from './Menu'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import About from "./pages/about"
 import Login from './components/login';
+import Touchgrass from './pages/touchgrass';
 
 
 function App() {  
@@ -17,6 +18,8 @@ function App() {
             <Route path ="/"element = {<Menu/>}/>
             <Route path ="/about"element = {<About/>}/>
             <Route path ="/login"element = {<Login/>}/>
+            <Route path ="/touchgrass"element = {<Touchgrass/>}/>
+
           </Routes>
         <div className="menu">
         
