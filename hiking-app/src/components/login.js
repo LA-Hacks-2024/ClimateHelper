@@ -24,18 +24,24 @@ function Login() {
   return (
     <div>
       <form onSubmit={handleLogin}>
+      <div className="menu">
+
         <input
           type="email"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
+        </div>
+        <div>
         <input
-          type="password"
+        
+          type="password" 
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
+        </div>
           <button classname="login-button" type="submit">Login</button>
           </form>
 

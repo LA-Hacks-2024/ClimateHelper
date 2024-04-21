@@ -6,7 +6,7 @@ const Menu = () => {
             <ul>
                 <li><Link to="/about" className="about-link">About</Link></li>
                 <li>Touch Grass</li>
-                <li><Link to="/login">Login</Link></li>
+                <li><Link to="/login" className="about-link">Login</Link></li>
                 {/* <li className = "signup">Signup</li> */}
             </ul>
         </div>
