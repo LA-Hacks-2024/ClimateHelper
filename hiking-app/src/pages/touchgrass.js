@@ -2,19 +2,18 @@ import React from "react";
 import {useNavigate} from "react-router-dom";
 import { Link } from 'react-router-dom';
 import grassImage from '../assets/grass.png';
+import yippeeSound from '../assets/yippee-tbh.mp3';
+
 
 
 function Touchgrass(){
   //const [goToHome, setGoToHome] = React.useState(false);
-  const navigate = useNavigate();
-  // if (goToHome){
-  //   return <Navigate to ="/"/>;
-  // }  
-  <script>
-    function play() {
-
-    }
-  </script>
+  
+  const play = () => {
+    const audio = new Audio(yippeeSound);
+    audio.play();
+    };
+  
 
   return (
      <div className="App-about">
@@ -29,9 +28,12 @@ function Touchgrass(){
       </ul>
       </div>
       <div >
-      <img src={grassImage} alt="grass"  style={{ width: '300px', height: '200px' }}/> 
+          <img src={grassImage} alt="grass" onClick= {play} style={{ width: '300px', height: '200px' }}/>
+      
       </div>
       </div>
   )
+  
 }
+
 export default Touchgrass;

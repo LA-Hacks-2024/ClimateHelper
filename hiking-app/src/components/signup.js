@@ -67,6 +67,7 @@ function Signup() {
       }}>
         Go to Home page
       </li>
+   
       </div>
     </div>
 
