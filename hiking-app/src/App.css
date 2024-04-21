@@ -27,7 +27,8 @@
   cursor: pointer;
   text-decoration: none;
   list-style: none;
-  
+  width: fit-content;
+  block-size: fit-content;
 
 }
 
